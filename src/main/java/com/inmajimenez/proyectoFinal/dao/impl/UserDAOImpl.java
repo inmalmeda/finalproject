@@ -32,7 +32,6 @@ public class UserDAOImpl implements UserDAO {
         CriteriaQuery<User> criteria =  builder.createQuery(User.class);
         Root<User> root = criteria.from(User.class);
 
-
         System.out.println(user.getEmail() + " " + user.getPassword() + "**********************");
 
         List<Predicate> predicates = new ArrayList<>();
