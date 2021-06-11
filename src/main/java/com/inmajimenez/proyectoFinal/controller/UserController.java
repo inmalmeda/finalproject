@@ -25,7 +25,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/auth")
+    @PostMapping("/auth/login")
     @ApiOperation("Comprueba el usuario en bbdd")
     public ResponseEntity<LoginResponse> checkUser(@ApiParam("Objeto del usuario")
                               @RequestBody LoginRequest login) throws URISyntaxException {
@@ -35,7 +35,7 @@ public class UserController {
         return ResponseEntity.ok(response);
     }
 
-    @PostMapping("/register")
+    @PostMapping("/auth/register")
     @ApiOperation("Comprueba el usuario en bbdd")
     public Response createUser(@ApiParam("Objeto del usuario")
                                     @RequestBody SignupRequest signUpuser) throws URISyntaxException {
